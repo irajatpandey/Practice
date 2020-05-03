@@ -15,23 +15,7 @@ class BinaryTree{
 
 
 void levelOrder(BinaryTree *root){
-    if(root == NULL) return;
-     queue<BinaryTree *> q;
-
-     q.push(root);
-     while(!q.empty()){
-        BinaryTree *temp = q.front();
-        cout << temp -> data << " ";
-        q.pop();
-
-        if(temp -> left)
-           q.push(temp -> left);
-        if(temp -> right)
-            q.push(temp -> right);
-
-                    
-     }
-
+   
     
 }
 int main(){
