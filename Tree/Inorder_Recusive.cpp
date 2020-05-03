@@ -15,13 +15,7 @@ class BinaryTree{
 
 
 void inorder(BinaryTree *root){
-    if(root == NULL)
-        return;
-
-    cout << root -> data << " ";
-    inorder(root -> left);
-    inorder(root -> right);
-
+    
     
 }
 int main(){
