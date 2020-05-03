@@ -13,25 +13,11 @@ class BinaryTree{
     
 };
 void printTopView(BinaryTree *root, map<int, pair<int, int>> &map, int level, int dist){
-    if(root == NULL) return;
-
-    if(map.find(dist) == map.end()){
-        map[dist] = {root -> data, level};
-    }
-    printTopView(root -> left, map, level + 1, dist - 1);
-    printTopView(root -> right, map, level + 1, dist + 1);
+    
 }
 
 void topView(BinaryTree *root){
-    if(root == NULL)
-        return;
-    map<int,pair<int,int>> map;
-    int level = 1;
-
-    printTopView(root, map, level, 0);
-    for(auto it : map){
-        cout << it.second.first << " ";
-    }
+    
 }
 
 
