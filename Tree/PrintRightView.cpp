@@ -15,25 +15,10 @@ class BinaryTree{
 
 
 void printRightViewOptimal(BinaryTree *root, int level, int *maxLevel){
-    if(root == NULL) return;
-    if(level >= (*maxLevel)){
-        cout << root -> data << " ";
-        (*maxLevel)++;
-
-    }
-
-    printRightViewOptimal(root -> right, level + 1, maxLevel);
-    printRightViewOptimal(root -> left, level + 1, maxLevel);
+   
 }
 void printRightView(BinaryTree *root, int level, map<int, int> &map){
-    if(root == NULL) return;
-
-    if(map.find(level) == map.end()){
-        map[level] = root -> data;
-    }
-
-    printRightView(root -> right, level + 1, map);
-    printRightView(root -> left, level + 1, map);
+  
 }
 
 
@@ -41,13 +26,7 @@ void printRightView(BinaryTree *root, int level, map<int, int> &map){
 // Auxiliary Space: O(n), due to the stack space during recursive call.
 
 void rightView(BinaryTree *root){
-    map<int, int> map;
-    // printRightView(root, 0, map);
-
-    // for(auto i : map) cout << i.second << " ";
-    // cout << endl;
-    int maxLevel = 0;
-    printRightViewOptimal(root, 0, &maxLevel);    
+   
 }
 
 int main(){
@@ -74,6 +53,6 @@ int main(){
     root -> right -> right = new BinaryTree(7); 
     root -> right -> left -> right = new BinaryTree(8); 
   
-   rightView(root);
+    rightView(root);
 
 }
