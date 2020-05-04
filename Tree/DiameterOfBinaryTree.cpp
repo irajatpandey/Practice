@@ -20,42 +20,13 @@ int height(BinaryTree *root){
 
 /*Time Complexity is O(n)*/
 pair<int,int> diameterOptimal(BinaryTree *root){
-  if(root == NULL){
-    pair<int,int> p;
-    p.first = 0;
-    p.second = 0;
-    return p;
-  }
-
-  pair<int,int> leftAns = diameterOptimal(root -> left);
-  int leftHeight = leftAns.first;
-  int leftDiameter = leftAns.second;
-
-  pair<int,int> rightAns = diameterOptimal(root -> right);
-  int rightHeight = rightAns.first;
-  int rightDiameter = rightAns.second;
-
-  int height = 1 + max(leftHeight, rightHeight);
-  int diameter = max(leftHeight + rightHeight, max(leftDiameter, rightDiameter));
-
-  pair<int,int> p;
-  p.first = height;
-  p.second = diameter;
-
-  return p;
-
+ 
 
 
 }
 /*Time Complexity is O(n * h) where h is height of the tree*/
 int diameter(BinaryTree *root){
-   if(root == NULL) return 0;
-
-   int h = height(root -> left) + height(root -> right);
-   int leftDiameter = diameter(root -> left);
-   int rightDiameter = diameter(root -> right);
-
-   return max(h,max(leftDiameter, rightDiameter));
+  
 }
 
 int main(){
