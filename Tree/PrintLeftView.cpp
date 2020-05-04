@@ -20,39 +20,17 @@ class BinaryTree{
 
    
 void printLeftViewOptimal(BinaryTree *root, int level, int *maxLevel){
-    if(root == NULL) return;
-    if(level >= (*maxLevel)){
-        cout << root -> data << " ";
-        (*maxLevel)++;
-
-    }
-
-    printLeftViewOptimal(root -> left, level + 1, maxLevel);
-    printLeftViewOptimal(root -> right, level + 1, maxLevel);
+    
 }
 
 // Time Complexity: The function does a simple traversal of the tree, so the complexity is O(n).
 // Auxiliary Space: O(n), due to the stack space during recursive call.
 
 void printLeftView(BinaryTree *root, int level , map<int, int> &map){
-    if(root == NULL) return;
-     if(map.find(level) == map.end()){
-        map[level] = root -> data;
-     }
-
-     printLeftView(root -> left, level + 1, map);
-     printLeftView(root -> right, level + 1, map);
+    
 }
 void leftView(BinaryTree *root){
-     map<int, int> map;
-
-     printLeftView(root, 0, map);
-
-     for(auto i : map ){
-        cout << i.second << " ";
-     }
-     int maxLevel = 0;
-     printLeftViewOptimal(root, 0, &maxLevel);
+     
 }
 
 int main(){
