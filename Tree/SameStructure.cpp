@@ -15,16 +15,7 @@ class BinaryTree{
 
 // Time Complexity O(n)
 bool isSameStructure(BinaryTree *root1, BinaryTree *root2){
-     if(root1 == NULL and root2 == NULL) return true;
-
-     if(root1 == NULL or root2 == NULL) return false;
-
-     if(isSameStructure(root1 -> left, root2 -> left) and (isSameStructure(root1 -> right, root2 -> right)))
-        return true;
     
-
-     return false;
-
 }
 int main(){
 
