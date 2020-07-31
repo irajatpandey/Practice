@@ -41,10 +41,12 @@ int main(){
 
 	LinkedList *head = NULL;
 
-	int arr[] = {100, 90, 80, 70, 60, 50, 40, 30, 20, 10};
+	int arr[] = {20, 4, 15, 10};
 	for(int i = 0; i < 10; i++)
 		insert(&head, arr[i]);
-	printList(head);
+	head->next->next->next->next = head; 
+
+	cout << lengthOfLoop(head) << endl;
 
 	
 
