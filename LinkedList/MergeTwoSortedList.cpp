@@ -28,15 +28,20 @@ void printList(LinkedList *head){
 
 int main(){
 
+	LinkedList *head1 = NULL;
+	LinkedList *head2 = NULL;
 	LinkedList *head = NULL;
 
-	int arr[] = {1, 2, 3, 4, 5};
+	int arr1[] = {9, 7, 5, 3, 1};
+	int arr2[] = {8, 6, 4, 2, 0};
 	for(int i = 0; i < 5; i++)
-		insert(&head, arr[i]);
-	printList(head);
+		insert(&head1, arr1[i]);
+	for(int i = 0; i < 5; i++)
+		insert(&head2, arr2[i]);
 
-	head = mergeSort(head);
+	head = merge(head1, head2);
 	printList(head);
+	
 	
 
 }
