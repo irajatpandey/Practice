@@ -1,0 +1,22 @@
+2. Laser Tag!
+CodeNation Fresher's batch has a tradition of laser tag tournaments. In laser tag, two teams play against each other. A team can have any number of players >= 1. The two teams can have unequal team members.
+
+For successful completion of this tournament, Ipshita [our HR] wants that every person must have played against every other person, as part of different teams. Every Laser tag match takes 30 minutes to complete.  Now the gaming arena has allowed Codenation to play for a maximum of X hours after which the arena closes. Given the number of folks in the batch as N, you will have to find out if Codenation will be able to finish the tournament before the complex closes?  
+
+
+Note: Please return output as 0 or 1, 1 means  tournament will successfully complete, 0 otherwise 
+
+Note: Partial Points are present
+
+Constraints : 
+2 <=  N < 10^6
+0 <= X  < 10^5
+
+Sample Input/Output
+Input:  3   1
+Output: 0
+
+
+Explanation
+
+For 3 players at least 2 laser tag matches are required so total 60 minutes (<= 1 hour) is enough for the tournament to end.

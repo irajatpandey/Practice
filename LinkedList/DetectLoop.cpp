@@ -12,13 +12,29 @@ class LinkedList{
 
 /* Using Hashing*/
 bool detectLoopHash(LinkedList *head){
-	
+	 set<LinkedList *> s;
+	 while(head != NULL){
+	 	if(s.find(head) != s.end())
+	 		return true;
+	 	s.insert(head);
+	 	head = head -> next;
+	 }
+	 return false;
 }
 
 /* Best Solution */
 bool detectLoop(LinkedList *head){
-	
+	LinkedList *fast = head;
+	LinkedList *slow = head;
 
+	while(fast -> next and fast -> next -> next){
+		slow = slow -> next;
+		fast = fast -> next -> next;
+		if(slow == fast)
+			return true;
+	}	
+ 
+  return false;	
 }
 void insert(LinkedList **head, int x){
 	 LinkedList *newNode = new LinkedList(x);

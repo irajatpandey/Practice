@@ -10,7 +10,16 @@ class LinkedList{
 	}	
 };
 void eliminateDuplicate(LinkedList *head){
-	
+	 LinkedList* finalHead = head;
+	 while(finalHead and finalHead -> next){
+	 	if(finalHead -> data == finalHead -> next -> data){
+	 		LinkedList *temp = finalHead -> next;
+	 		finalHead -> next  = finalHead -> next -> next;
+	 		delete(temp);
+	 	}
+	 	else
+	 	finalHead = finalHead -> next;
+	 }
 
 }
 

@@ -1,0 +1,70 @@
+3. AND Queries
+You have a large amount of data you need to store. You are interested in knowing some details about the structure of your data in binary in order to optimize how it is stored. In particular, you are interested in the bitwise AND of certain contiguous subarrays of its elements. To do so, you try to answer some queries.
+
+
+You're given an array A of n numbers. There are q queries that you need to answer. Each query is of the form l  r  s  t. For each contiguous subarray in the range l to r (inclusive), we define p as the bitwise AND of all its elements. The answer to each query is the number of contiguous subarrays of size s in this range that has p ≥ t.
+
+
+ 
+For example, given n = 6 numbers [21, 29, 31, 15, 13, 5] and a query 4 6 2 7, the range is [15, 13, 5]. In this, we need to find for how many subarrays of size 2 the value of p ≥ 7. The subarrays of size 2 are [15, 13] and [13, 5]. These have p values of 13 and 5. Therefore the output should be 1 since there is 1 subarray of size 2 ([15,13]) having p ≥ 7.
+
+
+ 
+Function Description
+
+Complete the function andQueries in the editor below.
+
+
+
+ 
+
+
+
+andQueries has the following parameter(s):
+
+
+
+    int numbers[n]: an array of integers
+
+
+
+    int queries[q][4]: a 2d array of integers where queries[i] contains the ith query.
+
+
+
+ 
+
+
+
+The function returns an array of q integers, the answer to each of the q queries.
+
+
+
+ 
+
+
+
+Constraints
+
+
+
+1 ≤ n ≤ 105
+
+1 ≤ q ≤ 500
+
+1 ≤ l ≤ r ≤ n
+
+1 ≤ s ≤ r-l+1
+
+1 ≤ A[i],t < 231
+
+Sample Input
+5
+2
+5
+4
+8
+3
+1
+4
+2 5 2 4

@@ -16,11 +16,26 @@ void insert(LinkedList **head, int x){
 	 (*head) = newNode;
 }
 LinkedList* reverse(LinkedList *head){
-	
+	if(head == NULL or head -> next == NULL) return head;
+	LinkedList *smallHead = reverse(head -> next);
+	head -> next -> next = head;
+	head -> next = NULL;
+	return smallHead;
 }
 /*Iterative Solution*/
 LinkedList* reverseIterative(LinkedList *head){
-	
+	LinkedList *curr = head;
+	LinkedList *prev = NULL;
+	LinkedList *next = NULL;
+
+	while(curr != NULL){
+		next = curr -> next;
+		curr -> next = prev;
+		prev = curr;
+		curr = next;
+	}
+
+	return prev;
 }
 
 

@@ -10,18 +10,26 @@ class LinkedList{
 	}	
 };
 
-int lengthOfLoop(Node *fast, Node *slow){
-    
+int lengthOfLoop(LinkedList *head){
+    LinkedList *slow = head;
+    LinkedList *fast = head;
+    while(fast -> next and fast -> next -> next){
+    	slow = slow -> next;
+    	fast = fast -> next -> next;
+
+    	if(slow == fast)
+    		break;
+    }
+    int count = 1;
+    while(slow -> next != fast){
+    	count++;
+    	slow = slow -> next;
+    }
+
+    return count;
 }
 
-int countNodesinLoop(struct Node *head)
-{
-     // Code here
-    
-       
-   
-     
-}
+
 
 void insert(LinkedList **head, int x){
 	 LinkedList *newNode = new LinkedList(x);
@@ -41,11 +49,11 @@ int main(){
 
 	LinkedList *head = NULL;
 
-	int arr[] = {100, 90, 80, 70, 60, 50, 40, 30, 20, 10};
+	int arr[] = {20, 4, 15, 10};
 	for(int i = 0; i < 10; i++)
 		insert(&head, arr[i]);
-	printList(head);
+	head->next->next->next->next = head; 
 
-	
+	cout << lengthOfLoop(head) << endl;
 
 }

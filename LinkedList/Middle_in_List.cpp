@@ -24,9 +24,15 @@ int middleOfLinkedList(LinkedList *head){
 	1 2 3 4 5		Answer = 3 		Condition for Odd length 	fast -> next != NULL 
 	1 2 3 4 5 6		Answer = 4		Condition for even length 	fast -> next -> next != NULL	*/
 
+	LinkedList *fast = head;
+	LinkedList *slow = head;
+	while(fast -> next and fast -> next -> next){
+		slow = slow -> next;
+		fast = fast -> next -> next;
 
+	}
 	
-	
+	return slow -> data;	
 }
 
 void printList(LinkedList *head){

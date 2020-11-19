@@ -1,0 +1,135 @@
+2. Perfect Array
+
+Your friend is not able to solve a question in the recent HackerRank League Contest and wants you to help them out. You are given two arrays consisting of integers, denoted as firstArray and secondArray respectively. A Perfect Array is defined as an array that can be converted to secondArray by removing some integers, and the removal of integers maintains its relative order.
+
+
+
+For example, let firstArray = [3,1,4,2,5] and secondArray = [3,4,5]. Here, firstArray is a Perfect Array because we can remove the integers 1 and 2 from it so that firstArray is equal to secondArray.
+
+
+
+As another example, let firstArray = [3,1,4,2,5] and secondArray = [4,5,7]. Here, firstArray is not a Perfect Array as we cannot make it equal to secondArray by removing integers.
+
+
+
+Because firstArray cannot always be a Perfect Array, what is the minimum number of integers you need to insert anywhere into firstArray so that it can become a Perfect Array?
+
+
+
+ 
+
+
+
+For example:
+
+
+
+firstArray = [4, 5, 1, 7, 8]
+
+
+
+secondArray = [4, 8, 7]
+
+
+
+Here, firstArray is not a Perfect Array because removing integers 5 and 1 makes [4, 7, 8], which is not equal to secondArray.
+
+
+
+Adding 7 at the end of firstArray makes it [4, 5, 1, 7, 8, 7].
+
+
+
+Now, removing the second, third, and fourth integers (5, 1, and 7) gives us [4, 8, 7], which is equal to secondArray.
+
+
+
+Hence, the minimum number of insertions to be made in firstArray is 1.
+
+
+
+ 
+
+
+
+Function Description
+
+
+
+Complete the function getMinInsertions in the editor below.
+
+
+
+The function must return an integer denoting the number of integers to be added to firstArray so that it becomes a Perfect Array.
+
+
+
+getMinInsertions has the following parameters:
+
+
+
+    firstArray: an array of integers
+
+
+
+    secondArray: an array of integers
+
+
+
+ 
+
+
+
+Constraints
+
+
+
+1 ≤ size of firstArray ≤ 105
+
+
+
+1 ≤ size of secondArray ≤ 105
+
+
+
+1 ≤ firstArray[i] ≤ 109
+
+
+
+1 ≤ secondArray[i] ≤ 109
+
+
+
+secondArray consists of distinct elements
+
+
+
+ 
+
+
+
+Input Format For Custom Testing
+
+Sample Case 0
+
+Sample Input For Custom Testing
+
+
+
+2
+
+3
+2
+
+1
+2
+
+Sample Output
+0
+
+
+Explanation
+
+Here, firstArray = [3, 2] and secondArray = [2].
+
+Removing 3 from firstArray makes it equal to secondArray. Hence, firstArray is already Perfect Array, and as no insertions were needed, the answer is 0.
