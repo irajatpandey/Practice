@@ -24,6 +24,7 @@ LinkedList* deleteMiddleOfLinkedList(LinkedList *head){
 	1 2 3 4 5		Answer = 3 		Condition for Odd length 	fast -> next != NULL 
 	1 2 3 4 5 6		Answer = 4		Condition for even length 	fast -> next -> next != NULL	*/
 
+<<<<<<< HEAD
 	LinkedList *fast = head;
 	LinkedList *slow = head;
 	LinkedList *prev = head;
@@ -36,6 +37,9 @@ LinkedList* deleteMiddleOfLinkedList(LinkedList *head){
 	prev -> next = slow -> next;
 	delete(slow);
 	return head;
+=======
+	
+>>>>>>> 84c80c075e409f2d9bebe12575b0355719ff53c4
 		
 }
 
@@ -61,4 +65,8 @@ int main(){
 	
 	
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 84c80c075e409f2d9bebe12575b0355719ff53c4

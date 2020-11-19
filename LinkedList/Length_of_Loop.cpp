@@ -53,6 +53,11 @@ int main(){
 	for(int i = 0; i < 10; i++)
 		insert(&head, arr[i]);
 	head->next->next->next->next = head; 
+<<<<<<< HEAD
+=======
+
+	cout << lengthOfLoop(head) << endl;
+>>>>>>> 84c80c075e409f2d9bebe12575b0355719ff53c4
 
 	cout << lengthOfLoop(head) << endl;
 

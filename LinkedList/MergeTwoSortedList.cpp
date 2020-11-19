@@ -75,11 +75,15 @@ int main(){
 		insert(&head1, arr1[i]);
 	for(int i = 0; i < 5; i++)
 		insert(&head2, arr2[i]);
+<<<<<<< HEAD
 	printList(head2);
 	printList(head1);
+=======
+>>>>>>> 84c80c075e409f2d9bebe12575b0355719ff53c4
 
 	head = merge(head1, head2);
 	printList(head);
+	
 	
 
 }
